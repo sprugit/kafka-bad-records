@@ -8,7 +8,7 @@ However, as mentioned by the author of the article, the solution (handling of th
 
 # Repo Structure
 
-This repo contains 2 main packages in the same project:
+This repo contains 3 main packages in the same project:
 ## * The optional package
 This package contains the example implemented [here](https://jonboulineau.me/blog/kafka/dealing-with-bad-records-in-kafka) using the aforementioned Optional class.
 ## * The stravro package
