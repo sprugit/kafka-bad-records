@@ -47,11 +47,11 @@ public class Deserializer extends KafkaAvroDeserializer {
 			writer.write(r, jsonEncoder);
 			jsonEncoder.flush();
 			p.setContent(new String(baos.toByteArray())).setAvro().setJson();
-        } catch (SerializationException e) {
-        	p.setContent(Base64.getEncoder().encodeToString(bytes));
-        } finally {
-        	return p;
-        }
+	        } catch (SerializationException e) {
+	        	p.setContent(Base64.getEncoder().encodeToString(bytes));
+	        } finally {
+	        	return p;
+	        }
 	}
 	
 }
