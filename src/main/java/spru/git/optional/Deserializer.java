@@ -19,10 +19,10 @@ public class Deserializer extends KafkaAvroDeserializer {
 	}
 
 	public Optional deserialize(String s, byte[] bytes, Schema readerSchema) {
-        try {
-            return Optional.of(super.deserialize(bytes, readerSchema));
-        } catch (SerializationException e) {
-            return Optional.empty();
-        }
+	        try {
+	            return Optional.of(super.deserialize(bytes, readerSchema));
+	        } catch (SerializationException e) {
+	            return Optional.empty();
+	        }
 	}
 }
