@@ -13,4 +13,6 @@ This repo contains 2 main packages in the same project:
 This package contains the example implemented [here](https://jonboulineau.me/blog/kafka/dealing-with-bad-records-in-kafka) using the aforementioned Optional class.
 ## * The stravro package
 This package contains another handy example which requires a bit of a background to explain it's existance. At a point I had a consumer consuming both JSON strings and JSON with AvroSchema. This isn't good. From both testing and debugging, I noticed that when the Consumer is expecting to receive a GenericRecord class, if it ends up receiving a JSON string, it will throw a deserialization error mentioning something about a **magic byte**, resulting in a blocked Consumer. This deserializer was made to fix that behaviour.
-
+While attempting to do the above, we conveniently move the deserialization from GenericRecord to JSON string directly into the deserializer itself making the code for the Consumer look much cleaner.
+## * The utils package
+This package contains a simple consumer: one that isn't concerned about anything regarding the messages, it just flushes them out of the queue.
